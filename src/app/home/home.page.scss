@@ -1,27 +1,93 @@
-#container {
-  text-align: center;
-
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
+//ALERT
+/* Note: These styles should be located in your global stylesheet */
+ion-action-sheet.my-custom-class {
+  --background: #f58840;
+  --backdrop-opacity: 0.6;
+  --button-background-selected: #e97223;
+  --button-color: #000000;
+  --color: #fff;
+  /* role: "destructive" button iOS styling override */
+  --ion-color-danger: #000000;
 }
 
-#container strong {
-  font-size: 20px;
-  line-height: 26px;
+ // ACCORDION
+ion-accordion {
+  margin: 0 auto;
 }
 
-#container p {
-  font-size: 16px;
-  line-height: 22px;
-
-  color: #8c8c8c;
-
-  margin: 0;
+ion-accordion.accordion-expanding,
+ion-accordion.accordion-expanded {
+  width: calc(100% - 32px);
+  margin: 16px auto;
 }
 
-#container a {
-  text-decoration: none;
+ion-accordion.accordion-collapsing ion-item[slot='header'],
+ion-accordion.accordion-collapsed ion-item[slot='header'] {
+  --background: var(--ion-color-light);
+  --color: var(--ion-color-light-contrast);
+}
+
+ion-accordion.accordion-expanding ion-item[slot='header'],
+ion-accordion.accordion-expanded ion-item[slot='header'] {
+  --background: var(--ion-color-primary);
+  --color: var(--ion-color-primary-contrast);
+}
+ //BREADCUMB
+ion-breadcrumb {
+  //--color: rgb(81, 155, 198);
+  --color: var(--ion-color-dark);
+  --color-active: rgb(150, 112, 220);
+  --color-hover: rgb(103, 61, 180);
+}
+
+ion-loading.custom-loading {
+  --background: #e3edff;
+  --spinner-color: var(--ion-color-primary);
+  color: var(--ion-color-dark);
+}
+ //CARD
+ion-card {
+  --background: #000000;
+  --color: #9efff0;
+}
+
+ion-card-title {
+  --color: #52ffe4;
+}
+
+ion-card-subtitle {
+  --color: #d1fff8;
+}
+ //toast
+ion-toast.custom-toast {
+  --background: #f4f4fa;
+  --box-shadow: 3px 3px 10px 0 rgba(0, 0, 0, 0.2);
+  --color: #4b4a50;
+}
+
+ion-toast.custom-toast::part(message) {
+  font-style: italic;
+}
+
+ion-toast.custom-toast::part(button) {
+  border-left: 1px solid #d2d2d2;
+  color: #030207;
+  font-size: 15px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.pStyle {
+  color: var(--ion-color-primary);
 }
